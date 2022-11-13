@@ -19,21 +19,11 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 15%;
+    width: 30%;
 }
 
 form label {
     color: white;
-}
-
-input {
-    background-color: rgb(15, 15, 15);
-    border-color: red;
-    border-radius: 5%;
-    font-size: 75%;
-    margin: 5%;
-    color: rgb(221, 221, 221);
-    font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 p {
