@@ -40,11 +40,6 @@ p {
     color: white;
 }
 
-.body {
-    display: flex;
-    justify-content: space-evenly;
-}
-
 .lowerBody {
     width: 100%;
     display: flex;
@@ -66,9 +61,47 @@ p {
     animation: loading 2s ease infinite;
 }
 
+.movie {
+    background-color: rgb(39, 39, 39);
+    border-radius: 5%;
+    border: 1px solid rgb(216, 216, 216);
+    width: 250px;
+    height: 300px;
+}
+
+#container {
+    display: flex;
+    justify-content: space-evenly;
+}
 
 #homepageDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#movie1h1 {
+    padding-left: 5%;
+}
+
+#movie2h1 {
+    padding-left: 5%;
+}
+
+#year1 {
+    padding-left: 5%;
+}
+
+#year2 {
+    padding-left: 5%;
+}
+
+#movie1rating {
+    padding-left: 5%;
+    font-size: 40px;
+}
+
+#movie2rating {
+    padding-left: 5%;
+    font-size: 40px;
 }

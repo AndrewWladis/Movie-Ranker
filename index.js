@@ -4,7 +4,6 @@ const movie1h1 = document.getElementById('movie1h1');
 const movie2h1 = document.getElementById('movie2h1');
 const movie1p = document.getElementById('movie1rating');
 const movie2p = document.getElementById('movie2rating');
-const bodyText = document.getElementById('bodyText');
 const year1 = document.getElementById('year1');
 const year2 = document.getElementById('year2');
 const spinner = document.getElementById('loading');
@@ -70,31 +69,24 @@ const start = async function(url) {
     let score1 = Math.round((+movie1ratingRT + +movie1ratingIMDB + +movie1ratingMC) / 3);
     let score2 = Math.round((+movie2ratingRT + +movie2ratingIMDB + +movie2ratingMC) / 3);
     
-    if (movie1Name == 'Monsters University') {
+    if (movie1Name == 'Morbius') {
         score1 = 100;
-    } else if (movie2Name == 'Monsters University') {
+    } else if (movie2Name == 'Morbius') {
         score2 = 100;
     }
-    
-    movie1p.innerHTML = score1;
-    movie2p.innerHTML = score2;
 
     if (score1 > score2) {
         movie1p.style.color = "#49FF33"
         movie2p.style.color = "#FE4646"
-        bodyText.innerHTML = `${movie1Name} is better than ${movie2Name}`;
-        bodyText.style.color = "#FFFFFF"
     } else if (score1 < score2) {
         movie2p.style.color = "#49FF33"
         movie1p.style.color = "#FE4646"
-        bodyText.innerHTML = `${movie2Name} is better than ${movie1Name}`;
-        bodyText.style.color = "#FFFFFF"
     } else if (score1 === score2) {
         movie1p.style.color = "#EEFE46"
         movie2p.style.color = "#EEFE46"
-        bodyText.innerHTML = `${movie1Name} is as good as ${movie2Name}`;
-        bodyText.style.color = "#EEFE46"
     };
+    movie1p.innerHTML = score1;
+    movie2p.innerHTML = score2;
     console.log(movie1ratingRT, movie1ratingIMDB, movie1ratingMC)
     spinner.remove()
 }
